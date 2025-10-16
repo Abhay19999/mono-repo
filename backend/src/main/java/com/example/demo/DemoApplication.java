@@ -16,7 +16,7 @@ public class DemoApplication {
 
     @GetMapping
     public String test(){
-        return "Testing"
+        return "Testing";
     }
 
     public static void main(String[] args) {
