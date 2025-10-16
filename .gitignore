@@ -1,0 +1,14 @@
+# Java/Gradle
+.gradle/
+**/build/
+!backend/build.gradle
+!backend/settings.gradle
+
+# Node/Vite
+node_modules/
+dist/
+
+# IDEs
+*.iml
+.idea/
+.vscode/
