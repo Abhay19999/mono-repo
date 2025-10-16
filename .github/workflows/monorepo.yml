@@ -31,7 +31,8 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '21'
+          java-version: '23'
+          cache: 'gradle'
       - name: Install Gradle (via SDKMAN)
         run: |
           curl -s "https://get.sdkman.io" | bash
@@ -40,7 +41,7 @@ jobs:
           gradle -v
       - name: Build backend
         working-directory: backend
-        run: gradle build
+        run: ./gradle clean build
 
   frontend-build:
     needs: detect-changes
