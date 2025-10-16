@@ -41,7 +41,7 @@ jobs:
           gradle -v
       - name: Build backend
         working-directory: backend
-        run: ./gradle clean build
+        run: gradle build
 
   frontend-build:
     needs: detect-changes
