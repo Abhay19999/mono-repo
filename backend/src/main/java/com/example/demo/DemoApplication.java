@@ -14,6 +14,11 @@ public class DemoApplication {
         return "Hello from backend!";
     }
 
+    @GetMapping
+    public String test(){
+        return "Testing"
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
     }

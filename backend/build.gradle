@@ -20,3 +20,8 @@ dependencies {
 tasks.withType(Test).configureEach {
     useJUnitPlatform()
 }
+tasks.withType(JavaExec).configureEach {
+  javaLauncher.set(javaToolchains.launcherFor {
+    languageVersion = JavaLanguageVersion.of(23)
+  })
+}
